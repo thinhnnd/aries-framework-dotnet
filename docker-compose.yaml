@@ -75,10 +75,10 @@ services:
     #   - ENDPOINT_HOST=${HOST2:-http://10.0.0.12:8000}
     ports:
       - "5000:5000"
-    # depends_on:
-    #   - "indy-pool"
-    # links:
-    #   - "indy-pool"
+    depends_on:
+      - "indy-pool"
+    links:
+      - "indy-pool"
     networks:
       agent_net:
         ipv4_address: 10.0.0.12
