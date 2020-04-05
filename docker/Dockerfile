@@ -5,7 +5,7 @@ FROM streetcred/dotnet-indy:1.14.2 AS build
 WORKDIR /src
 COPY [".", "."]
 
-WORKDIR /src/samples/aspnetcore
+WORKDIR /src/samples/dotnetMediator
 RUN dotnet restore "dotnetMediator.csproj" \
     -s "https://api.nuget.org/v3/index.json"
 
